@@ -1,0 +1,18 @@
+<div>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <div class="header">
+            <label [attr.for]="fields['name']">{{fields['label']}}</label> 
+            <button type="submit">Save</button>
+        </div> 
+        <br/>
+        <div class="entities">
+            <div *ngFor="let elm of fields['field']">
+                <div *ngIf="elm.system === undefined || (elm.system === false)">
+                    <label [attr.for]="elm.name">{{elm.label}}</label>
+                    <input [formControlName]="elm.name" [type]="elm.dataType" [id]="elm.name">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

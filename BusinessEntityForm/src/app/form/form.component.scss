@@ -1,0 +1,28 @@
+.header {
+    display: grid;
+    grid-template-columns: 3;    
+}
+
+.header label {
+    grid-column: 1;
+}
+
+.header button {
+    grid-column: 3;
+}
+
+.entities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1rem;    
+}
+
+.entities > div > div {
+    background: #EDE7F6;
+    padding: 1.5rem;
+    border-radius: 1rem;
+  }
+
+.entities > div > div > label {
+    margin-right: 5px;
+}  
